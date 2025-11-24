@@ -1,4 +1,4 @@
-package com.tdi.gc;
+package com.tdi.gc.epsilon;
 
 public class EpsilonGC {
 

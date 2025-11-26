@@ -11,8 +11,6 @@ public class StopTheWorldGC {
         @Override
         public void run() {
             try {
-
-
                 while (true) {
                     for (int i = 0; i < 10_000; i++) {
                         byte[] buffer = new byte[1024];

@@ -5,6 +5,7 @@ import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.WeakHashMap;
 import java.util.concurrent.TimeUnit;
 
 public class Soft {
@@ -26,11 +27,10 @@ public class Soft {
 
     private static void example2() throws InterruptedException {
         List<SoftReference<Object>> softReferences = new ArrayList<>();
-        for (int i = 0; i < 5_000_000; i++) {
+        for (int i = 0; i < 6_000_000; i++) {
             softReferences.add(new SoftReference<>(String.valueOf(i)));
         }
         new Scanner(System.in).nextLine();
-
         System.gc();
 
         int liveObjectsAfterGc = 0;
